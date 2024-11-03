@@ -10,6 +10,8 @@ const JobSchema = new mongoose.Schema({
    experienceLevel: { type: String, required: true },
    qualifications: [String],
    created_date: { type: Date, default: Date.now },
+   applicants: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
+
 });
 
 module.exports = mongoose.model("Job", JobSchema);
