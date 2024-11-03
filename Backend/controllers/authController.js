@@ -55,6 +55,7 @@ exports.logoutUser = (req, res) => {
   res.json({ msg: "User logged out successfully" });
 };
 
+
 // Register HR
 exports.registerAdmin = async (req, res) => {
   const { email, password } = req.body;
